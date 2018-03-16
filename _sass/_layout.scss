@@ -227,10 +227,11 @@ nav > ul {
 		border-top: 1px solid rgba(0, 0, 0, 0.075);
 	}
 }
-
-
-.nav-item {
-	display: block;
+.nav-home:hover .nav-item{
+    display: block;
+}
+.nav-home{
+    display: block;
 	font-family: "Open Sans", sans-serif;
 	line-height: 1;
 	margin: 0;
@@ -260,7 +261,43 @@ nav > ul {
 	}
 
 	&.top-level > a {
-	    display: block;
+		line-height: 1.5;
+		font-weight: 600;
+		padding-left: $space;
+	}
+    
+}
+.nav-item {
+	display: none;
+	font-family: "Open Sans", sans-serif;
+	line-height: 1;
+	margin: 0;
+
+	nav:not(.full-navigation) & > ul {
+		display: none;
+	}
+
+	nav:not(.full-navigation) &.current > ul {
+		display: block;
+	}
+
+	> a {
+		color: #666;
+		text-decoration: none;
+		font-size: 1.4rem;
+		padding: $space / 2 0 $space / 2 $space * 2;
+		display: block;
+	}
+
+	&.current > a,
+	> a:active {
+	    color:#33a8ff;
+	}
+	> a:hover {
+		color: #111;
+	}
+
+	&.top-level > a {
 		line-height: 1.5;
 		font-weight: 600;
 		padding-left: $space;
