@@ -77,4 +77,3 @@ defaults:
 types:
   - minor
   - major
-theme: jekyll-theme-minimal
