@@ -228,8 +228,9 @@ nav > ul {
 	}
 }
 
+
 .nav-item {
-	display: none;
+	display: block;
 	font-family: "Open Sans", sans-serif;
 	line-height: 1;
 	margin: 0;
@@ -259,7 +260,6 @@ nav > ul {
 	}
 
 	&.top-level > a {
-	    display: block;
 		line-height: 1.5;
 		font-weight: 600;
 		padding-left: $space;
