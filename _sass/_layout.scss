@@ -251,7 +251,9 @@ nav > ul {
 	}
 
 	&.current > a,
-	> a:active,
+	> a:active {
+	    color:#fff;
+	}
 	> a:hover {
 		color: #33a8ff;
 	}
