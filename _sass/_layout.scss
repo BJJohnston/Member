@@ -137,7 +137,7 @@ $nav-image: $baseurl + "/images/menu.svg";
 		}
 
 		&:hover {
-			background-color: rgba(255, 0, 0, 0.5);
+			background-color: rgba(0, 0, 0, 0.5);
 		}
 	}
 
@@ -253,7 +253,7 @@ nav > ul {
 	&.current > a,
 	> a:active,
 	> a:hover {
-		color: #111;
+		color: #33a8ff;
 	}
 
 	&.top-level > a {
