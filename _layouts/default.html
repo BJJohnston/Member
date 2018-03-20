@@ -39,24 +39,24 @@
 
 			<nav {% if site.show_full_navigation %}class="full-navigation"{% endif %}>
 				<ul>
-					<li><button onclick="myFunction()" class="nav-home top-level {% if page.url == '/' %}current{% endif %}">
+					<li onclick="myFunction()" class="nav-home top-level {% if page.url == '/' %}current{% endif %}">
 						{% assign home = site.html_pages | where: 'url', '/' | first %}
 						<a href="{{ site.baseurl }}/">{{ home.title }}</a>
-					</button></li>
+					</li>
 				</ul>
 
 				<ul>
 					{% assign grouped = site.docs | group_by: 'category' %}
 					{% for group in grouped %}
-						<li><button onclick="myFunction()" class="nav-home top-level {% if group.name == page.category %}current{% endif %}">
+						<li onclick="myFunction()" class="nav-home top-level {% if group.name == page.category %}current{% endif %}">
 							{% assign items = group.items | sort: 'order' %}
 							<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
 							<ul>
 								{% for item in items %}
-								<li>	<button onclick="myFunction()" class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></button></li>
+								<li onclick="myFunction()" class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
 								{% endfor %}
 							</ul>
-						</button></li>
+						</li>
 					{% endfor %}
 				</ul>
 
