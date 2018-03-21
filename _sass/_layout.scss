@@ -227,12 +227,12 @@ nav > ul {
 		border-top: 1px solid rgba(0, 0, 0, 0.075);
 	}
 }
-.nav-home:hover .nav-item{
-    display: block;
-}
 
+.nav-home:hover, .nav-home:focus{
+     color:#33a8ff;
+}
 .nav-home{
-    display: block;
+    display:block;
 	font-family: "Open Sans", sans-serif;
 	line-height: 1;
 	margin: 0;
