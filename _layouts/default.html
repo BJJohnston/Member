@@ -39,7 +39,7 @@
 
 			<nav {% if site.show_full_navigation %}class="full-navigation"{% endif %}>
 				<ul>
-					<li onclick="myFunction()" class="nav-home top-level {% if page.url == '/' %}current{% endif %}">
+					<li class="nav-home top-level {% if page.url == '/' %}current{% endif %}">
 						{% assign home = site.html_pages | where: 'url', '/' | first %}
 						<a href="{{ site.baseurl }}/">{{ home.title }}</a>
 					</li>
@@ -50,10 +50,10 @@
 					{% for group in grouped %}
 						<li onclick="myFunction()" class="nav-home top-level {% if group.name == page.category %}current{% endif %}">
 							{% assign items = group.items | sort: 'order' %}
-							<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
+							<a id="myDropdown" href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
 							<ul>
 								{% for item in items %}
-								<li onclick="myFunction()" class="nav-item {% if item.url == page.url %}current{% endif %}" id="myDropdown"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+								<li onclick="myFunction()" class="nav-item {% if item.url == page.url %}current{% endif %}" ><a id="myDropdown" href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
 								{% endfor %}
 							</ul>
 						</li>
@@ -85,6 +85,6 @@
 </html>
 <script>
     function myFunction(){
-        document.getElementById()
+        document.getElementById("myDropDown").classList.toggle("show");
     }
 </script>
